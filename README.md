@@ -1,32 +1,30 @@
 ![](UTA-DataScience-Logo.png)
 
-# Project Title
+# Dogs vs Cats Image Classifier
 
-* **One Sentence Summary** Using images provided from the “Dogs vs Cats” Kaggle challenge, develop an algorithm that can classify whether the given image is of a dog or cat. [(Kaggle challenge link)](https://www.kaggle.com/competitions/dogs-vs-cats/overview) 
+* Using images provided from the “Dogs vs Cats” Kaggle challenge, develop an algorithm that can classify whether the given image is of a dog or cat. [(Kaggle challenge link)](https://www.kaggle.com/competitions/dogs-vs-cats/overview) 
 
 ## Overview
 
-* This section could contain a short paragraph which include the following:
-  * **Definition of the tasks / challenge**  Ex: The task, as defined by the Kaggle challenge is to use a time series of 12 features, sampled daily for 1 month, to predict the next day's price of a stock.
-  * **Your approach** Ex: The approach in this repository formulates the problem as regression task, using deep recurrent neural networks as the model with the full time series of features as input. We compared the performance of 3 different network architectures.
-  * **Summary of the performance achieved** Ex: Our best model was able to predict the next day stock price within 23%, 90% of the time. At the time of writing, the best performance on Kaggle of this metric is 18%.
+  * **Definition of the tasks / challenge:**  The task, as defined by the Kaggle challenge is to use the provided dataset of JPG images of dogs and cats, to write an algorithm that can attempt to output a prediction that correctly classifies the image as either a dog or cat.
+  * **Your approach:** The approach for this image classification task is presented as a machine learning problem, using the deep convolution neural networks (CNNs) algorithm with JPG images as input to essentially be able to output a prediction through training. Furthermore, transfer learning will be applied by using a pre-trained model.
+  * **Summary of the performance achieved:** Performance for the challenge is based on the percentage of correctly labeled images. At the time of writing, calculated with approximately 70% of the test data, the best/winner performance on Kaggle had a final score of 0.98914.
 
 ## Summary of Workdone
-
-Include only the sections that are relevant an appropriate.
 
 ### Data
 
 * Data:
-  * Type: For example
-    * Input: medical images (1000x1000 pixel jpegs), CSV file: image filename -> diagnosis
-    * Input: CSV file of features, output: signal/background flag in 1st column.
-  * Size: How much data?
-  * Instances (Train, Test, Validation Split): how many data points? Ex: 1000 patients for training, 200 for testing, none for validation
+  * Type:
+    * Input: dog and cat images (varying sized pixel jpegs)
+  * Size: 853.95 MB
+  * Instances (Train, Test, Validation Split): 12,500 dogs, 12,500 cats for training, 25,000 for testing
 
 #### Preprocessing / Clean up
 
 * Describe any manipulations you performed to the data.
+* The images from the dataset vary in sizes, thus is needed to be standardly resized, for example to 200 x 200 pixels.
+* Proceeding with a high GPU with a minimum of 12 GB, (Google Colab Pro was used), we can load all the images, reshape them, and store it all in an array.
 
 #### Data Visualization
 
