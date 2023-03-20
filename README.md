@@ -25,6 +25,7 @@
 * Describe any manipulations you performed to the data.
 * The images from the dataset vary in sizes, thus is needed to be standardly resized, for example to 200 x 200 pixels.
 * Proceeding with a high GPU with a minimum of 12 GB, (Google Colab Pro was used), we can load all the images, reshape them, and store it all in an array.
+* Alternatively, redirect files into standard directories and use Keras to load progressively.
 
 #### Data Visualization
 
@@ -37,10 +38,9 @@ Show a few visualization of the data and say a few words about what you see.
 ### Problem Formulation
 
 * Define:
-  * Input / Output
+  * Input: jpeg images of dogs and cats / Output: Percent Accuracy of classification
   * Models
-    * Describe the different models you tried and why.
-  * Loss, Optimizer, other Hyperparameters.
+    * 1, 2, and 3-Block VGG
 
 ### Training
 
