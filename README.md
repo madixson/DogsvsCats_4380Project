@@ -2,7 +2,7 @@
 
 # Project Title
 
-* **One Sentence Summary** Using images provided from the “Dogs vs Cats” Kaggle challenge, develop an algorithm that can classify whether the given image is of a dog or cat. [(provide link).](https://www.kaggle.com/competitions/dogs-vs-cats/overview) 
+* **One Sentence Summary** Using images provided from the “Dogs vs Cats” Kaggle challenge, develop an algorithm that can classify whether the given image is of a dog or cat. [(Kaggle challenge link)](https://www.kaggle.com/competitions/dogs-vs-cats/overview) 
 
 ## Overview
 
