@@ -29,7 +29,7 @@
 #### Data Visualization
 
 Show a few visualization of the data and say a few words about what you see.
-Below are a few of the images of dogs and cats plotted.
+* Below are a few of the images of dogs and cats plotted. Notingly, the images are not of all the same size, hence the need for preprocessing.
 
 ![](DogVisualization.png)
 ![](CatVisualization.png)
