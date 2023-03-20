@@ -30,6 +30,9 @@
 
 Show a few visualization of the data and say a few words about what you see.
 
+![](UTA-DataScience-Logo.png)
+![](UTA-DataScience-Logo.png)
+
 ### Problem Formulation
 
 * Define:
