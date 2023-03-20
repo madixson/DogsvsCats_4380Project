@@ -2,8 +2,7 @@
 
 # Project Title
 
-* **One Sentence Summary** Ex: This repository holds an attempt to apply LSTMs to Stock Market using data from
-"Get Rich" Kaggle challenge (provide link). 
+* **One Sentence Summary** Using images provided from the “Dogs vs Cats” Kaggle challenge, develop an algorithm that can classify whether the given image is of a dog or cat. [(provide link).](https://www.kaggle.com/competitions/dogs-vs-cats/overview) 
 
 ## Overview
 
