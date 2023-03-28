@@ -15,22 +15,20 @@
 ### Data
 
 * Data:
-  * Type:
-    * Input: dog and cat images (varying sized pixel jpegs)
-  * Size: 853.95 MB
-  * Instances (Train, Test, Validation Split): 12,500 dogs, 12,500 cats for training, 25,000 for testing
+  * Type: Image data
+    * Input: 25,000 labeled images of dogs and cats
+  * Size: ~853.95 MB
+  * Instances (Train, Test, Validation Split): 25,000 training images, 12,500 testing images
 
 #### Preprocessing / Clean up
 
-* Describe any manipulations you performed to the data.
-* The images from the dataset vary in sizes, thus is needed to be standardly resized, for example to 200 x 200 pixels.
-* Proceeding with a high GPU with a minimum of 12 GB, (Google Colab Pro was used), we can load all the images, reshape them, and store it all in an array.
-* Alternatively, redirect files into standard directories and use Keras to load progressively.
+* The images from the dataset vary in sizes, thus is needed to be resized; Images are resized to 150x150 pixels
+* Images are normalized to have pixel values between 0 and 1 (binary).
+* Redirect files into standard directories and use Keras ImageGenerator class
 
 #### Data Visualization
 
-Show a few visualization of the data and say a few words about what you see.
-* Below are a few of the images of dogs and cats plotted. Notingly, the images are not of all the same size, hence the need for preprocessing.
+* Below are a few of the images of dogs and cats plotted. Notingly, the images are not of all the same size.
 
 ![](DogVisualization.png)
 ![](CatVisualization.png)
