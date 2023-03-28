@@ -2,13 +2,13 @@
 
 # Dogs vs Cats Image Classifier
 
-* Using images provided from the “Dogs vs Cats” Kaggle challenge, develop an algorithm that can classify whether the given image is of a dog or cat. [(Kaggle challenge link)](https://www.kaggle.com/competitions/dogs-vs-cats/overview) 
+* This repository holds a developed algorithm for the implementation of a Convolutional Neural Network (CNN) to classify images of dogs and cats from the Kaggle challenge "Dogs vs Cats" dataset with high accuracy.[(Kaggle challenge link)](https://www.kaggle.com/competitions/dogs-vs-cats/overview)
 
 ## Overview
 
-  * **Definition of the tasks / challenge:**  The task, as defined by the Kaggle challenge is to use the provided dataset of JPG images of dogs and cats, to write an algorithm that can attempt to output a prediction that correctly classifies the image as either a dog or cat.
-  * **Your approach:** The approach for this image classification task is presented as a machine learning problem, using the deep convolution neural networks (CNNs) algorithm with JPG images as input to essentially be able to output a prediction through training. Furthermore, transfer learning will be applied by using a pre-trained model.
-  * **Summary of the performance achieved:** Performance for the challenge is based on the percentage of correctly labeled images. At the time of writing, calculated with approximately 70% of the test data, the best/winner performance on Kaggle had a final score of 0.98914.
+  * **Definition of the tasks / challenge:**  The task, as defined by the Kaggle challenge is to use the provided dataset of dogs and cats images, to develop an algorithm to implment a model that will output an accurate prediction to classify the images.
+  * **Your approach:** The approach used in this repository is to build a CNN model that can identify features in the images that distinguish between dogs and cats. The model is trained on a dataset of labeled images of dogs and cats and is then evaluated on a separate test set. Accordingly, the use and implmentation of transfer learning can improve the model performance.
+  * **Summary of the performance achieved:** The performance of the model is measured in terms of classification accuracy, i.e., the percentage of test images that are correctly classified. At the time of writing, calculated with approximately 70% of the test data, the best/winner performance on Kaggle had a final score of 0.98914.
 
 ## Summary of Workdone
 
