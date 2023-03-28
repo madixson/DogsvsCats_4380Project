@@ -2,7 +2,7 @@
 
 # Dogs vs Cats Image Classifier
 
-* This repository holds a developed algorithm for the implementation of a Convolutional Neural Network (CNN) to classify images of dogs and cats from the Kaggle challenge "Dogs vs Cats" dataset with high accuracy. [(Kaggle challenge link)](https://www.kaggle.com/competitions/dogs-vs-cats/overview)
+* This repository holds a developed algorithm for the implementation of a Convolutional Neural Network (CNN) to classify images of dogs and cats from the Kaggle challenge "Dogs vs Cats" dataset with high accuracy.  [(Kaggle challenge link)](https://www.kaggle.com/competitions/dogs-vs-cats/overview)
 
 ## Overview
 
