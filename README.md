@@ -7,7 +7,7 @@
 ## Overview
 
   * **Definition of the tasks / challenge:**  The task, as defined by the Kaggle challenge is to use the provided dataset of dogs and cats images, to develop an algorithm to implment a model that will output an accurate prediction to classify the images.
-  * **Your approach:** The approach used in this repository is to build a CNN model that can identify features in the images that distinguish between dogs and cats. The model is trained on a dataset of labeled images of dogs and cats and is then evaluated on a separate test set. Accordingly, the use and implmentation of transfer learning can improve the model performance.
+  * **Your approach:** The approach used in this repository is to build a CNN model that can identify features in the images that distinguish between dogs and cats. The model is trained on a dataset of labeled images of dogs and cats and is then evaluated on a separate test set. Furthermore, the use and implementation of transfer learning can improve the model performance.
   * **Summary of the performance achieved:** The performance of the model is measured in terms of classification accuracy, i.e., the percentage of test images that are correctly classified. At the time of writing, calculated with approximately 70% of the test data, the best/winner performance on Kaggle had a final score of 0.98914.
 
 ## Summary of Workdone
@@ -18,17 +18,18 @@
   * Type: Image data
     * Input: 25,000 labeled images of dogs and cats
   * Size: ~853.95 MB
-  * Instances (Train, Test, Validation Split): 25,000 training images, 12,500 testing images
+  * Instances: 25,000 training images, 12,500 testing images
 
 #### Preprocessing / Clean up
 
-* The images from the dataset vary in sizes, thus is needed to be resized; Images are resized to 150x150 pixels
-* Images are normalized to have pixel values between 0 and 1 (binary).
+* The images from the dataset vary in sizes and need to be resized; Images are resized to 150x150 pixels
+* Images are rescaled to have pixel values between 0 and 1 (binary).
 * Redirect files into standard directories and use Keras ImageGenerator class
+* Randomly select 25% of images for use in test dataset
 
 #### Data Visualization
 
-* Below are a few of the images of dogs and cats plotted. Notingly, the images are not of all the same size.
+* Below are a few of the images of dogs and cats plotted. Noting, the images are of different sizes.
 
 ![](DogVisualization.png)
 ![](CatVisualization.png)
@@ -36,9 +37,9 @@
 ### Problem Formulation
 
 * Define:
-  * Input: jpeg images of dogs and cats / Output: Percent Accuracy of classification
-  * Models
-    * 1, 2, and 3-Block VGG
+  * Input: Images of dogs and cats (jpeg)
+  * Output: Binary classification label (dog or cat)
+  * Models: Experimenting with different CNN architectures
 
 ### Training
 
@@ -53,7 +54,10 @@
 
 * Clearly define the key performance metric(s).
 * Show/compare results in one table.
-* Show one (or few) visualization(s) of results, for example ROC curves.
+* Results from first CNN model:
+
+![](Train_Valid_Accuracy.png)
+![](Train_Valid_Loss.png)
 
 ### Conclusions
 
