@@ -37,23 +37,26 @@
 ### Problem Formulation
 
 * Define:
-  * Input: Images of dogs and cats (jpeg)
+  * Input: Images of dogs and cats of size 150x150 pixels (jpeg)
   * Output: Binary classification label (dog or cat)
-  * Models: Experimenting with different CNN architectures
+  * Models: A convolutional neural network with two convolutional layers, each followed by a max-pooling layer, and two fully connected layers. The activation function used in the convolutional layers is ReLU, and the last layer uses the sigmoid activation function to produce a probability score for the binary classification. (TBD Testing VGG16 Model)
+    * Loss: Binary cross-entropy
+    * Optimizer: Adam
+    * Other Hyperparameters: Learning rate=0.0001, Dropout=0.5
+    * Training: The model was trained for 20 epochs on a Google Colab using TensorFlow and Keras.
 
 ### Training
 
 * Describe the training:
-  * How you trained: software and hardware.
-  * How did training take.
-  * Training curves (loss vs epoch for test/train).
-  * How did you decide to stop training.
-  * Any difficulties? How did you resolve them?
+  * The training was done using TensorFlow and Keras libraries in Python programming language. The code was run on a Google Colab notebook with a GPU accelerator.
+  * The training took 20 epochs, where each epoch represents one full pass through the training data.
+  * The training loss decreased and the accuracy increased with each epoch. The validation loss and accuracy showed a similar trend. Overall, the training and validation loss decreased, while the training and validation accuracy increased with every epoch.
+  * The training was stopped after 20 epochs. This was a pre-determined value, but early stopping techniques can be used to stop the training when the validation loss does not improve after a certain number of epochs.
 
 ### Performance Comparison
 
-* Clearly define the key performance metric(s).
-* Show/compare results in one table.
+* The key performance metric used was accuracy.
+* The model achieved an accuracy of 83% on the testing set.
 * Results from first CNN model:
 
 ![](Train_Valid_Accuracy.png) 
@@ -61,62 +64,70 @@
 
 ### Conclusions
 
-* State any conclusions you can infer from your work. Example: LSTM work better than GRU.
+* The model performed reasonably well on the testing set, with an accuracy of 83%.
+* The use of a simple convolutional neural network with two convolutional layers and two fully connected layers was sufficient for this problem.
+* Further work could involve experimenting with different network architectures and hyperparameters to improve the performance.
 
 ### Future Work
 
-* What would be the next thing that you would try.
-* What are some other studies that can be done starting from here.
+* Experiment with different network architectures and hyperparameters to improve the performance.
+* Use transfer learning to fine-tune pre-trained models for this task.
+* Apply this package to other image classification tasks.
 
 ## How to reproduce results
 
-* In this section, provide instructions at least one of the following:
-   * Reproduce your results fully, including training.
-   * Apply this package to other data. For example, how to use the model you trained.
-   * Use this package to perform their own study.
-* Also describe what resources to use for this package, if appropirate. For example, point them to Collab and TPUs.
-
 ### Overview of files in repository
 
-* Describe the directory structure, if any.
-* List all relavent files and describe their role in the package.
-* An example:
-  * utils.py: various functions that are used in cleaning and visualizing data.
-  * preprocess.ipynb: Takes input data in CSV and writes out data frame after cleanup.
-  * visualization.ipynb: Creates various visualizations of the data.
-  * models.py: Contains functions that build the various models.
-  * training-model-1.ipynb: Trains the first model and saves model during training.
-  * training-model-2.ipynb: Trains the second model and saves model during training.
-  * training-model-3.ipynb: Trains the third model and saves model during training.
-  * performance.ipynb: loads multiple trained models and compares results.
-  * inference.ipynb: loads a trained model and applies it to test data to create kaggle submission.
-
-* Note that all of these notebooks should contain enough text for someone to understand what is happening.
+* The repository contains the following files:
+   * DogCat_Project.ipynb: Main notebook containing all the code and experiments.
+   * DogVisualization.png: Plotted test images of dogs.
+   * CatVisualization.png: Plotted test images of cats.
+   * Train_Valid_Accuracy.png: Training and validation accuracy plot
+   * Train_Valid_Loss.png: Training and validation loss plot
+   * README.md: Description of the project.
 
 ### Software Setup
-* List all of the required packages.
-* If not standard, provide or point to instruction for installing the packages.
-* Describe how to install your package.
+
+* Required packages: TensorFlow, Keras, Matplotlib, NumPy
+* To install the packages: pip install tensorflow keras matplotlib numpy
+* Detailed instructions are provided in the README.md file.
+* Usage of Google Colab for the GPU/TPU resources is recommended.
 
 ### Data
 
-* Point to where they can download the data.
-* Lead them through preprocessing steps, if necessary.
+* The dataset can be downloaded from Kaggle (https://www.kaggle.com/c/dogs-vs-cats/data).
+* Place the unzipped dataset in the project directory.
+* The images should be placed in the 'train' and 'test' folders in the project directory.
 
 ### Training
 
-* Describe how to train the model
+* Run the notebook "DogCat_Project.ipynb" to train the model.
+* To install the package containing the model and other necessary code, you can download the file and upload it to your environment or clone the GitHub repository. To clone the repository, run the following command in a terminal or in the Colab notebook:
+<br />'git clone https://github.com/your_username/your_repository.git'
+* To train the model, follow the main steps:
+    1) Set the data directories for the training and testing data.
+    2) Set the image size and batch size.
+    3) Use the ImageDataGenerator class to rescale the pixel values of the images.
+    4) Use the flow_from_directory method to generate batches of training and test data.
+    5) Build the CNN model using the Sequential class and add layers to it.
+    6) Compile the model using compile.
+    7) Train the model using the fit method and the training data generator.
+
+* Note: If you are running the code in Google Colab, you will need to mount your Google Drive to your notebook:
+<br /> 'from google.colab import drive <br />
+ drive.mount('/content/drive')'
 
 #### Performance Evaluation
 
-* Describe how to run the performance evaluation.
+* Run the notebook "DogCat_Project.ipynb" to evaluate the model on the test set.
+* Use visualization function plot_training_history() for further analysis and to plot results
 
 
 ## Citations
 
-* Provide any references.
-
-
+* Dataset: https://www.kaggle.com/c/dogs-vs-cats/data
+* TensorFlow: https://www.tensorflow.org
+* KerasProcessing: https://keras.io/api/preprocessing/image/
 
 
 
