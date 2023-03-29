@@ -56,7 +56,7 @@
 * Show/compare results in one table.
 * Results from first CNN model:
 
-![](Train_Valid_Accuracy.png)
+![](Train_Valid_Accuracy.png) 
 ![](Train_Valid_Loss.png)
 
 ### Conclusions
