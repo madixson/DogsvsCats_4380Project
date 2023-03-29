@@ -72,7 +72,7 @@
    * The use of a simple convolutional neural network with two convolutional layers and two fully connected layers can be sufficient.
    * Overall, the CNN model seems to have achieved good accuracy on the validation dataset, but it has also been observed that the model is overfitting to the training dataset. This can be seen by comparing the training and validation accuracy values, where the difference between them increases as the number of epochs increases
  * VGG16 Model
-   * 
+   * The model performed ...
 
 
 ### Future Work
