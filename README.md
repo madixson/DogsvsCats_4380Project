@@ -56,17 +56,24 @@
 ### Performance Comparison
 
 * The key performance metric used was accuracy.
-* The model achieved an accuracy of 83% on the testing set.
-* Results from first CNN model:
+* Results from CNN model:
+  * The model achieved an accuracy of 83% on the testing set.
+  
+  ![](Train_Valid_Accuracy.png) 
+  ![](Train_Valid_Loss.png)
 
-![](Train_Valid_Accuracy.png) 
-![](Train_Valid_Loss.png)
+* Results from VGG16 model:
+  * The model achieved an accuracy of _ on the testing set.
 
 ### Conclusions
 
-* The model performed reasonably well on the testing set, with an accuracy of 83%.
-* The use of a simple convolutional neural network with two convolutional layers and two fully connected layers was sufficient for this problem.
-* Further work could involve experimenting with different network architectures and hyperparameters to improve the performance.
+* CNN Model
+   * The model performed reasonably well on the testing set, with an accuracy of 83%.
+   * The use of a simple convolutional neural network with two convolutional layers and two fully connected layers can be sufficient.
+   * Overall, the CNN model seems to have achieved good accuracy on the validation dataset, but it has also been observed that the model is overfitting to the training dataset. This can be seen by comparing the training and validation accuracy values, where the difference between them increases as the number of epochs increases
+ * VGG16 Model
+   * 
+
 
 ### Future Work
 
