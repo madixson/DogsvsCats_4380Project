@@ -182,7 +182,8 @@ In conclusion, while the simple CNN model is still able to achieve a decent leve
 * TensorFlow: https://www.tensorflow.org
 * KerasProcessing: https://keras.io/api/preprocessing/image/
 
-
+* VGG16 Pretrained Weights:
+The pre-trained VGG16 model is from the ImageNet dataset, which is a large-scale image recognition dataset containing 1.2 million images in 1,000 different classes. VGG16 was one of the top-performing models in the ImageNet Large Scale Visual Recognition Challenge (ILSVRC) in 2014.
 
 
 
