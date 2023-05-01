@@ -1,4 +1,4 @@
-![banner](DogCatBanner.jpg)
+![banner](DogCat_Banner.jpg)
 
 # Dogs vs Cats Image Classifier
 
