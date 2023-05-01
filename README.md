@@ -125,8 +125,12 @@
    * ResultsVisualization.ipynb:
    * DogVisualization.png: Plotted test images of dogs.
    * CatVisualization.png: Plotted test images of cats.
-   * Train_Valid_Accuracy.png: Training and validation accuracy plot
-   * Train_Valid_Loss.png: Training and validation loss plot
+   * Train_Valid_Accuracy.png: Training and validation accuracy plot of Simple CNN
+   * Train_Valid_Loss.png: Training and validation loss plot of Simple CNN
+   * Train_Valid_Accuracy-VGG16.png: Training and validation accuracy plot of VGG16
+   * Train_Valid_Loss-VGG16.png: Training and validation loss plot of VGG16
+   * Train_Valid_Accuracy-ResNet.png: Training and validation accuracy plot of ResNet
+   * Train_Valid_Loss-ResNet.png: Training and validation loss plot of ResNet
    * README.md: Description of the project.
 
 ### Software Setup
