@@ -181,9 +181,11 @@ In conclusion, while the simple CNN model is still able to achieve a decent leve
 * Dataset: https://www.kaggle.com/c/dogs-vs-cats/data
 * TensorFlow: https://www.tensorflow.org
 * KerasProcessing: https://keras.io/api/preprocessing/image/
+* ResNet50 Model: https://www.tensorflow.org/api_docs/python/tf/keras/applications/ResNet50
 
 * VGG16 Pretrained Weights:
 The pre-trained VGG16 model is from the ImageNet dataset, which is a large-scale image recognition dataset containing 1.2 million images in 1,000 different classes. VGG16 was one of the top-performing models in the ImageNet Large Scale Visual Recognition Challenge (ILSVRC) in 2014.
 
-
+* ResNet Pretrained Weights:
+The ResNet50 model in the code is using pre-trained weights from the ImageNet database. These weights are trained on a large-scale dataset of images and have proven to be useful for many computer vision tasks.
 
