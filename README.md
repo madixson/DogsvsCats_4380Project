@@ -107,11 +107,17 @@
    * The model performed ...
 
 
+Based on these results, it can be seen that the more complex models (VGG16 and ResNet) outperform the simpler CNN model. This is likely due to the fact that VGG16 and ResNet have more layers and are able to capture more complex features in the images, which leads to better classification performance. Additionally, the use of transfer learning likely played a role in improving the performance of the models, as pre-trained weights from ImageNet were used to initialize the weights of the convolutional layers.
+
+In conclusion, while the simple CNN model is still able to achieve a decent level of accuracy, the more complex VGG16 and ResNet models with transfer learning are able to achieve even higher accuracy and are therefore recommended for this task.
+
 ### Future Work
 
-* Experiment with different network architectures and hyperparameters to improve the performance.
-* Use transfer learning to fine-tune pre-trained models for this task.
-* Apply this package to other image classification tasks.
+* Explore different pre-trained models and compare their performance with the current models.
+* Experiment with different hyperparameters and regularization techniques to see if better performance can be achieved.
+* Increase the size of the dataset by collecting more images or using data augmentation techniques to create more training examples.
+* Explore the use of different architectures such as Recurrent Neural Networks (RNNs) or Transformers to see if they can be used to improve the accuracy of the classification.
+* Deploy the models in a real-world application and test their performance on a larger and more diverse dataset (i.e. other image classification tasks).
 
 ## How to reproduce results
 
