@@ -1,4 +1,4 @@
-![](UTA-DataScience-Logo.png)
+![banner](DogCatBanner.jpg)
 
 # Dogs vs Cats Image Classifier
 
