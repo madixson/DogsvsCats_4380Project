@@ -2,7 +2,7 @@
 
 # Dogs vs Cats Image Classifier
 
-* This repository contains implementations of three different models, a simple CNN, VGG16, and ResNet, for classifying images of dogs and cats from the Kaggle challenge 'Dogs vs Cats' dataset. The objective is to compare the performance of these models and determine which one achieves the highest accuracy. (Kaggle challenge link)
+* This repository contains implementations of three different models, a simple CNN, VGG16, and ResNet, for classifying images of dogs and cats from the Kaggle challenge 'Dogs vs Cats' dataset. The objective is to compare the performance of these models and determine which one achieves the highest accuracy. [(Kaggle challenge link)](https://www.kaggle.com/competitions/dogs-vs-cats/data)
 
 ## Overview
 
