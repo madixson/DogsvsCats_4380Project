@@ -39,7 +39,23 @@
 * Define:
   * Input: Images of dogs and cats of size 150x150 pixels (jpeg)
   * Output: Binary classification label (dog or cat)
-  * Models: A convolutional neural network with two convolutional layers, each followed by a max-pooling layer, and two fully connected layers. The activation function used in the convolutional layers is ReLU, and the last layer uses the sigmoid activation function to produce a probability score for the binary classification. (TBD Testing VGG16 Model)
+  * Models: 
+  1) Simple CNN
+  * A convolutional neural network with two convolutional layers, each followed by a max-pooling layer, and two fully connected layers. The activation function used in the convolutional layers is ReLU, and the last layer uses the sigmoid activation function to produce a probability score for the binary classification.
+    * Loss: Binary cross-entropy
+    * Optimizer: Adam
+    * Other Hyperparameters: Learning rate=0.0001, Dropout=0.5
+    * Training: The model was trained for 20 epochs on a Google Colab using TensorFlow and Keras.
+
+  2) VGG16
+  * A convolutional neural network with two convolutional layers, each followed by a max-pooling layer, and two fully connected layers. The activation function used in the convolutional layers is ReLU, and the last layer uses the sigmoid activation function to produce a probability score for the binary classification.
+    * Loss: Binary cross-entropy
+    * Optimizer: Adam
+    * Other Hyperparameters: Learning rate=0.0001, Dropout=0.5
+    * Training: The model was trained for 20 epochs on a Google Colab using TensorFlow and Keras.
+
+  3) ResNet
+  * A convolutional neural network with two convolutional layers, each followed by a max-pooling layer, and two fully connected layers. The activation function used in the convolutional layers is ReLU, and the last layer uses the sigmoid activation function to produce a probability score for the binary classification.
     * Loss: Binary cross-entropy
     * Optimizer: Adam
     * Other Hyperparameters: Learning rate=0.0001, Dropout=0.5
