@@ -2,12 +2,12 @@
 
 # Dogs vs Cats Image Classifier
 
-* This repository holds a developed algorithm for the implementation of a Convolutional Neural Network (CNN) to classify images of dogs and cats from the Kaggle challenge "Dogs vs Cats" dataset with high accuracy.  [(Kaggle challenge link)](https://www.kaggle.com/competitions/dogs-vs-cats/overview)
+* This repository contains implementations of three different models, a simple CNN, VGG16, and ResNet, for classifying images of dogs and cats from the Kaggle challenge 'Dogs vs Cats' dataset. The objective is to compare the performance of these models and determine which one achieves the highest accuracy. (Kaggle challenge link)
 
 ## Overview
 
   * **Definition of the tasks / challenge:**  The task, as defined by the Kaggle challenge is to use the provided dataset of dogs and cats images, to develop an algorithm to implment a model that will output an accurate prediction to classify the images.
-  * **Your approach:** The approach used in this repository is to build a CNN model that can identify features in the images that distinguish between dogs and cats. The model is trained on a dataset of labeled images of dogs and cats and is then evaluated on a separate test set. Furthermore, the use and implementation of transfer learning can improve the model performance.
+  * **Your approach:** The approach used in this repository compares the performance of three different models (a simple CNN, VGG16, and ResNet) for classifying images of dogs and cats from the Kaggle challenge "Dogs vs Cats" dataset. The approach is to identify features in the images that distinguish between dogs and cats, and the models are trained and evaluated on a dataset of labeled images using transfer learning techniques to improve performance
   * **Summary of the performance achieved:** The performance of the model is measured in terms of classification accuracy, i.e., the percentage of test images that are correctly classified. At the time of writing, calculated with approximately 70% of the test data, the best/winner performance on Kaggle had a final score of 0.98914.
 
 ## Summary of Workdone
