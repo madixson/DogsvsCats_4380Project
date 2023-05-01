@@ -6,9 +6,9 @@
 
 ## Overview
 
-  * **Definition of the tasks / challenge:**  The task, as defined by the Kaggle challenge is to use the provided dataset of dogs and cats images, to develop an algorithm to implment a model that will output an accurate prediction to classify the images.
-  * **Your approach:** The approach used in this repository compares the performance of three different models (a simple CNN, VGG16, and ResNet) for classifying images of dogs and cats from the Kaggle challenge "Dogs vs Cats" dataset. The approach is to identify features in the images that distinguish between dogs and cats, and the models are trained and evaluated on a dataset of labeled images using transfer learning techniques to improve performance
-  * **Summary of the performance achieved:** The performance of the model is measured in terms of classification accuracy, i.e., the percentage of test images that are correctly classified. At the time of writing, calculated with approximately 70% of the test data, the best/winner performance on Kaggle had a final score of 0.98914.
+  * The task, as defined by the Kaggle challenge is to use the provided dataset of dogs and cats images, to develop an algorithm to implment a model that will output an accurate prediction to classify the images.
+  * The approach used in this repository compares the performance of three different models (a simple CNN, VGG16, and ResNet) for classifying images of dogs and cats from the Kaggle challenge "Dogs vs Cats" dataset. The approach is to identify features in the images that distinguish between dogs and cats, and the models are trained and evaluated on a dataset of labeled images using transfer learning techniques to improve performance
+  * The performance of the model is measured in terms of classification accuracy, i.e., the percentage of test images that are correctly classified. At the time of writing, calculated with approximately 70% of the test data, the best/winner performance on Kaggle had a final score of 0.98914.
 
 ## Summary of Workdone
 
@@ -22,7 +22,7 @@
 
 #### Preprocessing / Clean up
 
-* The images from the dataset vary in sizes and need to be resized; Images are resized to 150x150 pixels
+* The images from the dataset vary in sizes and need to be resized; Images are resized to 224x224 pixels
 * Images are rescaled to have pixel values between 0 and 1 (binary).
 * Redirect files into standard directories and use Keras ImageGenerator class
 * Randomly select 25% of images for use in test dataset
@@ -49,18 +49,18 @@
     * Training: The model was trained for 20 epochs on a Google Colab using TensorFlow and Keras.
 
  <br />  2) VGG16
-  * A convolutional neural network with two convolutional layers, each followed by a max-pooling layer, and two fully connected layers. The activation function used in the convolutional layers is ReLU, and the last layer uses the sigmoid activation function to produce a probability score for the binary classification.
+  * The base model used is VGG16, a deep convolutional neural network that has been pre-trained on the ImageNet dataset. The top layer of the base model is removed, and two new dense layers are added for classification. The output of the model is a single sigmoid activation function that outputs a probability score for the binary classification task.
     * Loss: Binary cross-entropy
     * Optimizer: Adam
-    * Other Hyperparameters: Learning rate=0.0001, Dropout=0.5
-    * Training: The model was trained for 20 epochs on a Google Colab using TensorFlow and Keras.
+    * Other Hyperparameters: Learning rate=0.0001
+    * Training: The model was trained for 10 epochs on a Google Colab
 
   <br /> 3) ResNet
-  * A convolutional neural network with two convolutional layers, each followed by a max-pooling layer, and two fully connected layers. The activation function used in the convolutional layers is ReLU, and the last layer uses the sigmoid activation function to produce a probability score for the binary classification.
+  * The ResNet50 model is pre-trained on the ImageNet dataset and is used as a base model without the top layer. New layers are added for classification, including a global average pooling layer, a dense layer with a rectified linear unit (ReLU) activation function, and a final dense layer with a sigmoid activation function.
     * Loss: Binary cross-entropy
     * Optimizer: Adam
-    * Other Hyperparameters: Learning rate=0.0001, Dropout=0.5
-    * Training: The model was trained for 20 epochs on a Google Colab using TensorFlow and Keras.
+    * Other Hyperparameters: Learning rate=0.0001
+    * Training: The model was trained for 10 epochs on a Google Colab
 
 
 ### Training
@@ -74,11 +74,13 @@
   * The training was stopped after 20 epochs. This was a pre-determined value, but early stopping techniques can be used to stop the training when the validation loss does not improve after a certain number of epochs.
 
 * VGG16:
-  * The training took 20 epochs, where each epoch represents one full pass through the training data.
+  * The training took 10 epochs, where each epoch represents one full pass through the training data.
 
 * ResNet:
-  * The training took 20 epochs, where each epoch represents one full pass through the training data.
-  * The training loss decreased and the accuracy increased with each epoch. The validation loss and accuracy showed a similar trend. Overall, the training 
+  * The training took 10 epochs, where each epoch represents one full pass through the training data.
+  * The ResNet50 model started with a lower accuracy of 0.6096 and ended with an accuracy of 0.6855.
+  * The ResNet50 model had fluctuating accuracy and loss values throughout its training
+  * The validation accuracy for the ResNet50 model was relatively stable throughout its training
 
 ### Performance Comparison
 
@@ -92,7 +94,7 @@
   * The model achieved an accuracy of _ on the testing set.
 
 * Results from ResNet model:
-  * The model achieved an accuracy of _ on the testing set.
+  * The model achieved an accuracy of 69% on the testing set.
   
   ![banner](Resnet_Results.png)
 
@@ -105,12 +107,17 @@
  * VGG16 Model
    * The model performed ...
  * ResNet Model
-   * The model performed ...
+   * The model achieved an accuracy of 68.55% on the training dataset and 67.71% on the validation dataset.
+   * The training and validation loss decreased over the course of the 10 epochs, indicating that the model was learning from the data.
+   * The training and validation accuracy increased over the course of the 10 epochs, indicating that the model was becoming better at classifying images.
+   * The model performed better on the training dataset than on the validation dataset, suggesting that there may have been some overfitting.
+   * The highest validation accuracy achieved by the model was 69.55% at epoch 8, but the accuracy dropped slightly in the subsequent epochs.
+   * The model used transfer learning, initializing the weights with pre-trained weights from the ResNet50 model without the top layers.
 
 
-Based on these results, it can be seen that the more complex models (VGG16 and ResNet) outperform the simpler CNN model. This is likely due to the fact that VGG16 and ResNet have more layers and are able to capture more complex features in the images, which leads to better classification performance. Additionally, the use of transfer learning likely played a role in improving the performance of the models, as pre-trained weights from ImageNet were used to initialize the weights of the convolutional layers.
+Based on these results, it can be seen that the more complex models (VGG16 and ResNet) did not outperform the simpler CNN model, but this is likely due to the fact that VGG16 and ResNet had less time and trained on less epochs, which leads to better classification performance. Though these two models have more layers and are able to capture more complex features in the images, they take significantly longer to train. However, ideally the use of transfer learning can play a role in improving the performance of the models, as pre-trained weights from ImageNet were used to initialize the weights of the convolutional layers.
 
-In conclusion, while the simple CNN model is still able to achieve a decent level of accuracy, the more complex VGG16 and ResNet models with transfer learning are able to achieve even higher accuracy and are therefore recommended for this task.
+In conclusion, while the simple CNN model is still able to achieve a decent level of accuracy, the more complex VGG16 and ResNet models with transfer learning can potentially achieve even higher accuracy given more epochs and longer training times. However, the simple CNN model could prove to be sufficient for the specific task at hand.
 
 ### Future Work
 
@@ -125,19 +132,16 @@ In conclusion, while the simple CNN model is still able to achieve a decent leve
 ### Overview of files in repository
 
 * The repository contains the following files:
-   * Preprocess-DogCat.ipynb: 
-   * Simple-CNNModel.ipynb:
-   * VGG16Model.ipynb:
-   * ResNetModel.ipynb:
-   * ResultsVisualization.ipynb:
+   * Preprocess-DogCat.ipynb: This notebook preprocesses the image dataset from Kaggle and provides initial visualization.
+   * Simple-CNNModel.ipynb: This notebook holds the model architecture for a simple constructed CNN.
+   * VGG16Model.ipynb: This notebook holds the model for a pretrained VGG16
+   * ResNetModel.ipynb: This notebook holds the model for a pretrained ResNet50
+   * ResultsVisualization.ipynb: This notebook performs visualization analysis between the train and validation set of the model loss and accuracy
    * DogVisualization.png: Plotted test images of dogs.
    * CatVisualization.png: Plotted test images of cats.
-   * Train_Valid_Accuracy.png: Training and validation accuracy plot of Simple CNN
-   * Train_Valid_Loss.png: Training and validation loss plot of Simple CNN
-   * Train_Valid_Accuracy-VGG16.png: Training and validation accuracy plot of VGG16
-   * Train_Valid_Loss-VGG16.png: Training and validation loss plot of VGG16
-   * Train_Valid_Accuracy-ResNet.png: Training and validation accuracy plot of ResNet
-   * Train_Valid_Loss-ResNet.png: Training and validation loss plot of ResNet
+   * CNN_Results.png: Training & validation accuracy and loss plot of Simple CNN
+   * Resnet_Results.png: Training & validation accuracy and loss plot of ResNet
+   * VGG16_Results.png: Training & validation accuracy and loss plot of VGG16
    * README.md: Description of the project.
 
 ### Software Setup
