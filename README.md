@@ -124,7 +124,7 @@ In conclusion, while the simple CNN model is still able to achieve a decent leve
 ### Overview of files in repository
 
 * The repository contains the following files:
-   * Preprocess_DogCat.ipynb: 
+   * Preprocess-DogCat.ipynb: 
    * Simple-CNNModel.ipynb:
    * VGG16Model.ipynb:
    * ResNetModel.ipynb:
@@ -145,6 +145,7 @@ In conclusion, while the simple CNN model is still able to achieve a decent leve
 * To install the packages: pip install tensorflow keras matplotlib numpy
 * Detailed instructions are provided in the README.md file.
 * Usage of Google Colab for the GPU/TPU resources is recommended.
+* Pickle package is implemented to save training and validation results of each model to be later used for visualization analysis
 
 ### Data
 
@@ -152,28 +153,27 @@ In conclusion, while the simple CNN model is still able to achieve a decent leve
 * Place the unzipped dataset in the project directory.
 * The images should be placed in the 'train' and 'test' folders in the project directory.
 
-### Training
+### Preprocessing Data
 
-* Run the notebook "DogCat_Project.ipynb" to train the model.
+* Run the notebook "Preprocess-DogCat.ipynb" to preprocess the data
+* Pre processing photos into directories
+* Randomly select 25% of images for use in test dataset and format directories for use of the Keras ImageDataGenerator class
+
+### Training Different Models
+
+* Run the notebook "Simple-CNNModel.ipynb" to train with the Simple CNN Model.
+* Run the notebook "VGG16Model.ipynb" to train with the VGG16 Pretrained Model.
+* Run the notebook "ResNetModel.ipynb" to train with the ResNet Pretrained Model.
 * To install the package containing the model and other necessary code, you can download the file and upload it to your environment or clone the GitHub repository. To clone the repository, run the following command in a terminal or in the Colab notebook:
 <br />'git clone https://github.com/your_username/your_repository.git'
-* To train the model, follow the main steps:
-    1) Set the data directories for the training and testing data.
-    2) Set the image size and batch size.
-    3) Use the ImageDataGenerator class to rescale the pixel values of the images.
-    4) Use the flow_from_directory method to generate batches of training and test data.
-    5) Build the CNN model using the Sequential class and add layers to it.
-    6) Compile the model using compile.
-    7) Train the model using the fit method and the training data generator.
-
 * Note: If you are running the code in Google Colab, you will need to mount your Google Drive to your notebook:
 <br /> 'from google.colab import drive <br />
  drive.mount('/content/drive')'
 
 #### Performance Evaluation
 
-* Run the notebook "DogCat_Project.ipynb" to evaluate the model on the test set.
-* Use visualization function plot_training_history() for further analysis and to plot results
+* Each model notebook trains the data as well as validates on the test dataset.
+* Run the notebook "ResultsVisualization.ipynb" for further analysis and to plot results
 
 
 ## Citations
