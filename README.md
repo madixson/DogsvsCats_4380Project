@@ -67,9 +67,18 @@
 
 * Describe the training:
   * The training was done using TensorFlow and Keras libraries in Python programming language. The code was run on a Google Colab notebook with a GPU accelerator.
+
+* Simple CNN:
   * The training took 20 epochs, where each epoch represents one full pass through the training data.
   * The training loss decreased and the accuracy increased with each epoch. The validation loss and accuracy showed a similar trend. Overall, the training and validation loss decreased, while the training and validation accuracy increased with every epoch.
   * The training was stopped after 20 epochs. This was a pre-determined value, but early stopping techniques can be used to stop the training when the validation loss does not improve after a certain number of epochs.
+
+* VGG16:
+  * The training took 20 epochs, where each epoch represents one full pass through the training data.
+
+* ResNet:
+  * The training took 20 epochs, where each epoch represents one full pass through the training data.
+  * The training loss decreased and the accuracy increased with each epoch. The validation loss and accuracy showed a similar trend. Overall, the training 
 
 ### Performance Comparison
 
@@ -83,6 +92,9 @@
 * Results from VGG16 model:
   * The model achieved an accuracy of _ on the testing set.
 
+* Results from ResNet model:
+  * The model achieved an accuracy of _ on the testing set.
+
 ### Conclusions
 
 * CNN Model
@@ -90,6 +102,8 @@
    * The use of a simple convolutional neural network with two convolutional layers and two fully connected layers can be sufficient.
    * Overall, the CNN model seems to have achieved good accuracy on the validation dataset, but it has also been observed that the model is overfitting to the training dataset. This can be seen by comparing the training and validation accuracy values, where the difference between them increases as the number of epochs increases
  * VGG16 Model
+   * The model performed ...
+ * ResNet Model
    * The model performed ...
 
 
@@ -104,7 +118,11 @@
 ### Overview of files in repository
 
 * The repository contains the following files:
-   * DogCat_Project.ipynb: Main notebook containing all the code and experiments.
+   * Preprocess_DogCat.ipynb: 
+   * Simple-CNNModel.ipynb:
+   * VGG16Model.ipynb:
+   * ResNetModel.ipynb:
+   * ResultsVisualization.ipynb:
    * DogVisualization.png: Plotted test images of dogs.
    * CatVisualization.png: Plotted test images of cats.
    * Train_Valid_Accuracy.png: Training and validation accuracy plot
@@ -113,7 +131,7 @@
 
 ### Software Setup
 
-* Required packages: TensorFlow, Keras, Matplotlib, NumPy
+* Required packages: TensorFlow, Keras, Matplotlib, NumPy, Pickle
 * To install the packages: pip install tensorflow keras matplotlib numpy
 * Detailed instructions are provided in the README.md file.
 * Usage of Google Colab for the GPU/TPU resources is recommended.
