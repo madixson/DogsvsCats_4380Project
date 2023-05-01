@@ -86,14 +86,15 @@
 * Results from CNN model:
   * The model achieved an accuracy of 83% on the testing set.
   
-  ![](Train_Valid_Accuracy.png) 
-  ![](Train_Valid_Loss.png)
+  ![banner](CNN_Results.png)
 
 * Results from VGG16 model:
   * The model achieved an accuracy of _ on the testing set.
 
 * Results from ResNet model:
   * The model achieved an accuracy of _ on the testing set.
+  
+  ![banner](Resnet_Results.png)
 
 ### Conclusions
 
