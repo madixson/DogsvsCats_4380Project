@@ -91,7 +91,7 @@
   ![banner](CNN_Results.png)
 
 * Results from VGG16 model:
-  * The model achieved an accuracy of _ on the testing set.
+  * The model achieved an accuracy of on the testing set.
 
 * Results from ResNet model:
   * The model achieved an accuracy of 69% on the testing set.
